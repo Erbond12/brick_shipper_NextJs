@@ -1,0 +1,29 @@
+.container {
+    background-color: var(--main-background-color);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons {
+    padding: 7px;
+    border-radius: 10px;
+    margin: 4px;
+    font-size: medium;
+    background-color: var(--main-button-color);
+}
+
+.settings {
+    padding: 7px;
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-right: 8px;
+    font-size: medium;
+    background-color: var(--main-button-color);
+    display: flex;
+}
+
+.logo {
+    margin: 8px;
+}
