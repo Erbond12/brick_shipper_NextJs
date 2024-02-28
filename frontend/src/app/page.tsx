@@ -1,6 +1,20 @@
+"use client"
+
 import Table_home_page from "@/components/table_home_page/Table_home_page"
+import {useEffect, useState} from "react";
 
 export default function Home() {
+    const [test, setTest] = useState();
+    useEffect(() => {
+        const getData = async () => {
+            const query = await fetch('http://localhost:8080/api/v1/order') //http://localhost:8080/api/v1/order
+            const response = await query.json();
+            console.log("response from api", response);
+            setTest(response);
+        }
+        getData();
+    }, []);
+
   return (
     <div className="mt-10">
       <div className="items-center justify-between lg:flex">
@@ -10,6 +24,9 @@ export default function Home() {
         <a className="flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0" href="/newRoute">
           New Route?
         </a>
+        <h1>
+            response: {test}
+        </h1>
       </div>
       <div>
         <Table_home_page />

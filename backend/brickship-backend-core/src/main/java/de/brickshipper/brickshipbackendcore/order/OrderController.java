@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin // configure CORS for security and ability to make api calls
 @RequestMapping(path = "/api/v1/order")
 public class OrderController {
 
